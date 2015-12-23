@@ -66,12 +66,12 @@
 	2. Glide
 	3. Fresco
 
-其中`Picasso`和`Glide`的接口十分接近，但是benckmark下来Glide的性能更好一些，并且支持更多格式的图片。我们现在使用的的是`Glide`。而`Fresco`的功能是这3个库中最强大的，且支持PJPG。但是他需要替换你的View，并且接口设计的不如上述2个库。笔者在3个多月以前用Fresco的时候，他在加载多张图片的时候偶尔会有显示不出的情况，不确定现在是否修复。
+其中`Picasso`和`Glide`的接口十分接近，但是benckmark下来Glide的性能更好一些，并且支持更多格式的图片，我们现在使用的的是`Glide`，而`Fresco`的功能是这3个库中最强大的，且支持PJPG。但是他需要替换你的View，并且接口设计的不如上述2个库。笔者在3个多月以前用`Fresco`的时候，他在加载多张图片的时候偶尔会有显示不出的情况，不确定现在是否修复。
 
 ## REST API
 关于REST API是一件几乎纯体力活，这里应当使用代码生成工具来帮助我们完成繁琐的工作。如果你的App追求极致的性能和流量，这里可以使用protocal buffer。这个有一个坑，就是PB原生的生成器生成的方法数非常多，会造成Android方法数64K的问题。可以使用Square开源的wire来降低方法数。
 
-不过笔者的APP并没有使用二进制协议，使用了更容易调试的JSON。其中我们可以定义Json Schema来描述协议，后台与客户端都可以拿这个schema来生成成自己的Model和验证协议数据。Android中可以[jsonschema2pojo](https://github.com/joelittlejohn/jsonschema2pojo)来生成自己的Model代码，并且可以生成Parcelable代码(PS:这一部分可能还存在隐藏BUG，如果你在使用过程中有什么问题可以提issue或者直接联系笔者)。
+不过笔者的APP并没有使用二进制协议，使用了更容易调试的JSON。其中我们可以定义JSON Schema来描述协议，后台与客户端都可以拿这个schema来生成自己的Model和验证协议数据。Android中可以[jsonschema2pojo](https://github.com/joelittlejohn/jsonschema2pojo)来生成自己的Model代码，并且可以生成Parcelable代码(PS:这一部分可能还存在隐藏BUG，如果你在使用过程中有什么问题可以提issue或者直接联系笔者)。
 
 关于REST API还有一个杀手级的库[Retrofit](https://github.com/square/retrofit)。Retrofit可以完美配合jackson+Rxjava来实现一个基于ReactiveX的REST Client。
 
@@ -84,7 +84,7 @@
     );
 ```
 
-声明十分简单明了，具体可以去retrofit的官网了解更多[retrofit](http://square.github.io/retrofit/)
+声明十分简单明了，具体可以去[retrofit](http://square.github.io/retrofit/)的官网了解更多。
 
 ## 最佳实践
 关于最佳实践当然见仁见智，不过笔者还是推荐一些比较成熟的方案[android-best-practices](https://github.com/futurice/android-best-practices)，这个建议精读一下，里面的每一条都是别人踩过的坑总结来的，十分有价值。
