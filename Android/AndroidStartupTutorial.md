@@ -41,8 +41,8 @@
         );
 	```
 
-	几句简单明了的代码，满足的我们上述的需求，而且看起来十分明了简单。其中`.compose.(this.bindToLifecycle())`是为了防止内存泄露，`.debounce(300, TimeUnit.MILLISECONDS)`是表示间隔为300毫秒，使用switchMap是会停止之前发出的请求，防止脏数据重入。
-	由于Android并不支持Java 8,所以我们需要Retrolambda，来支持lambda表达式。
+	几句简单明了的代码，满足上述的需求，而且看起来十分明了简单。其中`.compose.(this.bindToLifecycle())`是为了防止内存泄露，`.debounce(300, TimeUnit.MILLISECONDS)`是表示间隔为300毫秒，使用switchMap是会停止之前发出的请求，防止脏数据重入。
+	由于Android并不支持Java 8，所以我们需要Retrolambda，来支持lambda表达式。
 
 2. 防止多次点击重入
 
