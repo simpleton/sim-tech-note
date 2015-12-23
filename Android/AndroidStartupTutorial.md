@@ -99,12 +99,13 @@
 
 fabric和umeng的功能有很大的重叠，fabric是twitter旗下的数据上报和分析系统，笔者这里使用了他的crash报上，做的十分强大，给App的质量提供了保证。splunk是一款服务端的log分析系统，有了他的支持客户端可以减少需要无谓的事件上报。
 
-另外
+另外,[DebugDrawer](https://github.com/palaima/DebugDrawer)也值得推荐，可以帮你继承很多debug时的小工具，快速的在debug版本分析、诊断问题。
+
 
 ## 最佳实践
 关于最佳实践当然见仁见智，不过笔者还是推荐一些比较成熟的方案[android-best-practices](https://github.com/futurice/android-best-practices)，这个建议精读一下，里面的每一条都是别人踩过的坑总结来的，十分有价值。
 
-虽然笔者一直是一个人默默开发，但是还是会遵守[git-flow](https://github.com/nvie/gitflow)。每次多花一点点实践换来的分支的规整还是值得的。另外TJ开发的[git-extra](https://github.com/tj/git-extras)会有很多对github友好的命令，也值得推荐。
+虽然笔者一直是一个人默默开发，但是还是会遵守[git-flow](https://github.com/nvie/gitflow)。每次多花一点点实践换来的分支的规整还是值得的。另外TJ开发的[git-extras](https://github.com/tj/git-extras)会有很多对github友好的命令，也值得推荐。
 
 另外关于代码格式，也没有官方统一的方案，笔者这里推荐使用Square的[java-code-styles](https://github.com/square/java-code-styles),也可以自己fork做相应的修改。
 
