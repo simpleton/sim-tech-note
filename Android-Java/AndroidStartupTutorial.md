@@ -75,15 +75,19 @@
 
 声明十分简单明了，具体可以去retrofit的官网了解更多[retrofit](http://square.github.io/retrofit/)
 
-
 ## 最佳实践
 关于最佳实践当然见仁见智，不过笔者还是推荐一些比较成熟的方案[android-best-practices](https://github.com/futurice/android-best-practices)，这个建议精读一下，里面的每一条都是别人踩过的坑总结来的，十分有价值。
 
 虽然笔者一直是一个人默默开发，但是还是会遵守`git-flow`。每次多花一点点实践换来的分支的规整还是值得的。另外TJ开发的`git-extra`会有很多对github友好的命令，也值得推荐。
 
 另外关于代码格式，也没有官方统一的方案，笔者这里推荐使用Square的[java-code-styles](https://github.com/square/java-code-styles),也可以自己fork做相应的修改。
+
+另外强烈push设计的同学使用Sketch，这样不仅可以解放设计的同学在无尽的切图中，也可以让自己节约更多的时间。
+
 ## 参考文章
 [ReactiveX](http://reactivex.io/)
 [RxJava](https://github.com/ReactiveX/RxJava)
 [大神4篇](http://blog.danlew.net/2014/09/15/grokking-rxjava-part-1/)
-[mvvm](https://medium.com/ribot-labs/android-application-architecture-8b6e34acda65#.3q5d3yt6p)
+[android-application-architecture](https://medium.com/ribot-labs/approaching-android-with-mvvm-8ceec02d5442#.suutwto9a)
+[android-application-architecture](https://medium.com/ribot-labs/android-application-architecture-8b6e34acda65#.6qmzrqtdn)
+[Improving UX with RxJava](https://medium.com/@diolor/improving-ux-with-rxjava-4440a13b157f#.21alo61m9)
