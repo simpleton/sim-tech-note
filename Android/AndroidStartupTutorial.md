@@ -21,7 +21,7 @@
 ## RxJava
 首先给大家安利[ReactiveX](http://reactivex.io/)，其中Android的核心实现为RxJava。
 
-为了App不卡顿，我们会把所有耗时的操作（比如：网络访问、文件访问）放到Worker Thread中。但是Android本身的AsyncTask的设计个人觉得设计的十分糟糕，不但写出来的代码冗长，而且稍微复杂一些的多流操作就会写的完全无法维护（这里可以用Java本身的线程模式来实现）。而且肆意的开线程也会造成App的卡顿。这里本身最初的想法就是需要一个线程池，以Promise的方式对外提供接口。原先试用过facebook的开源方案[Bolts-Android](https://github.com/BoltsFramework/Bolts-Android)，这个库是parse的开源方案。后来有iOS的同时推荐Reactive的方案，于是就走上了Rx脑残粉的不归路。
+为了App不卡顿，我们会把所有耗时的操作（比如：网络访问、文件访问）放到Worker Thread中。但是Android本身的AsyncTask的设计个人觉得设计的十分糟糕，不但写出来的代码冗长，而且稍微复杂一些的多流操作就会写的完全无法维护（这里可以用Java本身的线程模式来实现）。而且肆意的开线程也会造成App的卡顿。这里本身最初的想法就是需要一个线程池，以Promise的方式对外提供接口。原先试用过facebook的开源方案[Bolts-Android](https://github.com/BoltsFramework/Bolts-Android)，这个库是parse的开源方案。后来有iOS的同事推荐Reactive的方案，于是就走上了Rx脑残粉的不归路。
 
 首先Rx会大大减少你的代码量，这一点对“懒惰”的我们十分重要。
 下面举2个平时开发都会遇到的问题来举例：
