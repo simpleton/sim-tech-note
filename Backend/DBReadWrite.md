@@ -35,5 +35,5 @@ Com_stmt_prepare            prepare语句创建的次数
 发现Com_stmt_prepare的增长要大于Com_stmt_close，说明有leak。
 然后去掉Kingshard，让beego直连rds发现2个参数增长一致，消除泄露。
 
-+ 疑点1： python 的 mysql库并未开启stmt，而beego的orm似乎每次请求都开启了stmt，然后再自己关闭，不知用意何在。
-+ 疑点2：Kingshard也缓存了stmt，而且似乎没有关闭的时机，已提出[issue](https://github.com/flike/kingshard/issues/72)。
++ 疑点1： python 的 mysql库并未开启stmt，而beego的orm似乎每次请求都开启了stmt，然后再自己关闭，不知用意何在。[issue](https://github.com/astaxie/beego/issues/1454)
++ 疑点2：Kingshard也缓存了stmt，现在已经可以正确关闭了[issue](https://github.com/flike/kingshard/issues/72)。
