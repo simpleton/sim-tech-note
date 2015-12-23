@@ -123,3 +123,5 @@ fabric和umeng的功能有很大的重叠，fabric是twitter旗下的数据上�
 [android-application-architecture](https://medium.com/ribot-labs/android-application-architecture-8b6e34acda65#.6qmzrqtdn)
 
 [Improving UX with RxJava](https://medium.com/@diolor/improving-ux-with-rxjava-4440a13b157f#.21alo61m9)
+
+[给 Android 开发者的 RxJava 详解](http://gank.io/post/560e15be2dca930e00da1083#toc_10)
