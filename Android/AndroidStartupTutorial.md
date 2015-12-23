@@ -3,7 +3,7 @@
 - [创业码农的一些建议](#)
 	- [App架构](#app)
 		- [RxJava](#rxjava)
-		- [MVVM & MVP](#mvvm-mvp)
+		- [MVP & MVVM](#mvp-mvvm)
 	- [如何优雅的偷懒](#)
 		- [REST Client](#rest-client)
 		- [Image Loader](#image-loader)
@@ -56,11 +56,11 @@
         .subscribe(this::onButtonClick);
 	```
 
-### MVVM & MVP
+### MVP & MVVM
 
 ![image](http://7tszlo.com2.z0.glb.qiniucdn.com/mvvm.pic.jpg)
 
-关于MVVM我一直是拒绝的，因为一开始的几个Screen我是用硬套MVVM的模式来做的，虽然activity的代码十分简单，但是View和ViewModel都会写一些晦涩、重复的逻辑来保证数据绑定，这不符合D.R.Y.。后来发现google官方有一个[data-binding](http://developer.android.com/tools/data-binding/guide.html)的实现，感觉实现和prism十分类似，已经在最新的迭代中开始使用data-binding来实现MVVM，具体可以参考一个第三方[例子](https://github.com/ivacf/archi)。
+关于MVP&MVVM我一直是拒绝的，因为一开始的几个Screen我是用硬套MVP&MVVM的模式来做的，虽然activity的代码十分简单，但是View和ViewModel都会写一些晦涩、重复的逻辑来保证数据绑定，这不符合D.R.Y.。后来发现google官方有一个[data-binding](http://developer.android.com/tools/data-binding/guide.html)的实现，感觉实现和prism十分类似，已经在最新的迭代中开始使用data-binding来实现MVVM，具体可以参考一个第三方[例子](https://github.com/ivacf/archi)。
 
 ## 如何优雅的偷懒
 ### REST Client
@@ -97,7 +97,7 @@
 	2. [umeng](http://umeng.com)
 	3. [splunk](http://www.splunk.com)
 
-fabric和umeng的功能有很大的重叠，fabric是twitter旗下的数据上报和分析系统，笔者这里使用了他的crash报上，做的十分强大，给App的质量提供了保证。
+fabric和umeng的功能有很大的重叠，fabric是twitter旗下的数据上报和分析系统，笔者这里使用了他的crash报上，做的十分强大，给App的质量提供了保证。splunk是一款服务端的log分析系统，有了他的支持客户端可以减少需要无谓的事件上报。
 
 ## 最佳实践
 关于最佳实践当然见仁见智，不过笔者还是推荐一些比较成熟的方案[android-best-practices](https://github.com/futurice/android-best-practices)，这个建议精读一下，里面的每一条都是别人踩过的坑总结来的，十分有价值。
