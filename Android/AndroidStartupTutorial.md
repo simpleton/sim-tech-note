@@ -1,5 +1,16 @@
-# 创业码农的一些建议
+<!-- TOC depth:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
+- [创业码农的一些建议](#)
+	- [RxJava](#rxjava)
+	- [MVVM & MVP](#mvvm-mvp)
+	- [Image Loader](#image-loader)
+	- [REST API](#rest-api)
+	- [最佳实践](#)
+	- [总结](#)
+	- [参考文章](#)
+<!-- /TOC -->
+
+# 创业码农的一些建议
 开篇先友情提示一下，此篇文章所谈论的技术点与微信无关，如有描述不准确的地方，也欢迎大家支出与讨论。笔者邮箱为 sunsj1231[at]gmail.com
 作者去年离开微信，变成一个创业码农，期间也踩过一些坑，这里与大家分享一些我个人的经验。
 
@@ -84,10 +95,18 @@
 
 另外强烈push设计的同学使用Sketch，这样不仅可以解放设计的同学在无尽的切图中，也可以让自己节约更多的时间。
 
+## 总结
+
+
 ## 参考文章
 [ReactiveX](http://reactivex.io/)
+
 [RxJava](https://github.com/ReactiveX/RxJava)
+
 [大神4篇](http://blog.danlew.net/2014/09/15/grokking-rxjava-part-1/)
+
 [android-application-architecture](https://medium.com/ribot-labs/approaching-android-with-mvvm-8ceec02d5442#.suutwto9a)
+
 [android-application-architecture](https://medium.com/ribot-labs/android-application-architecture-8b6e34acda65#.6qmzrqtdn)
+
 [Improving UX with RxJava](https://medium.com/@diolor/improving-ux-with-rxjava-4440a13b157f#.21alo61m9)
