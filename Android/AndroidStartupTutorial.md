@@ -8,7 +8,7 @@
 		- [REST Client](#rest-client)
 		- [Image Loader](#image-loader)
 		- [ButterKnife](#butterknife)
-		- [质量保证](#)
+	- [质量保证](#)
 	- [最佳实践](#)
 	- [总结](#)
 	- [参考文章](#)
@@ -94,7 +94,7 @@
 ### ButterKnife
 Jake Wharton是个非常高产的大神，诸多开源库都是他主导的（RxAndroid也是他主要在主导）。[ButterKnife](https://github.com/JakeWharton)可以帮助你少写很多重复的code。配合IDEA的插件可以不用写很多繁琐的`findviewByid`的搬砖代码。
 
-### 质量保证
+## 质量保证
 监控数据对于App来讲也十分重要，Growth Hacker和开发都需要经常关注。笔者现在在用的有一下几款产品：
 
 	1. [fabric](https://get.fabric.io/)
