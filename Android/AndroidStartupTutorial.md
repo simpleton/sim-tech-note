@@ -7,6 +7,7 @@
 	- [如何优雅的偷懒](#)
 		- [REST Client](#rest-client)
 		- [Image Loader](#image-loader)
+		- [数据监控与分析](#)
 	- [最佳实践](#)
 	- [总结](#)
 	- [参考文章](#)
@@ -61,7 +62,7 @@
 
 关于MVVM我一直是拒绝的，因为一开始的几个Screen我是用硬套MVVM的模式来做的，虽然activity的代码十分简单，但是View和ViewModel都会写一些晦涩、重复的逻辑来保证数据绑定，这不符合D.R.Y.。后来发现google官方有一个[data-binding](http://developer.android.com/tools/data-binding/guide.html)的实现，感觉实现和prism十分类似，已经在最新的迭代中开始使用data-binding来实现MVVM，具体可以参考一个第三方[例子](https://github.com/ivacf/archi)。
 
-## 如何优雅的偷懒 
+## 如何优雅的偷懒
 ### REST Client
 关于REST API是一件几乎纯体力活，这里应当使用代码生成工具来帮助我们完成繁琐的工作。如果你的App追求极致的性能和流量，这里可以使用protocal buffer。这个有一个坑，就是PB原生的生成器生成的方法数非常多，会造成Android方法数64K的问题。可以使用Square开源的wire来降低方法数。
 
@@ -87,7 +88,16 @@
 	2. [Glide](https://github.com/bumptech/glide)
 	3. [Fresco](https://github.com/facebook/fresco)
 
-其中`Picasso`和`Glide`的接口十分接近，但是benckmark下来Glide的性能更好一些，并且支持更多格式的图片，我们现在使用的的是`Glide`，而`Fresco`的功能是这3个库中最强大的，且支持PJPG。但是他需要替换你的View，并且接口设计的不如上述2个库。笔者在3个多月以前用`Fresco`的时候，他在加载多张图片的时候偶尔会有显示不出的情况，不确定现在是否修复。
+其中`Picasso`和`Glide`的接口十分接近，但是benckmark下来`Glide`的性能更好一些，并且支持更多格式的图片，我们现在使用的的是`Glide`，而`Fresco`的功能是这3个库中最强大的，且支持`PJPG`。但是他需要替换你的View，并且接口设计的不如上述2个库。笔者在3个多月以前用`Fresco`的时候，他在加载多张图片的时候偶尔会有显示不出的情况，不确定现在是否修复。
+
+### 数据监控与分析
+监控数据对于App来讲也十分重要，Growth Hacker和开发都需要经常关注。笔者现在在用的有一下几款产品：
+
+	1. [fabric](https://get.fabric.io/)
+	2. [umeng](http://umeng.com)
+	3. [splunk](http://www.splunk.com)
+
+fabric和umeng的功能有很大的重叠，fabric是twitter旗下的数据上报和分析系统，笔者这里使用了他的crash报上，做的十分强大，给App的质量提供了保证。
 
 ## 最佳实践
 关于最佳实践当然见仁见智，不过笔者还是推荐一些比较成熟的方案[android-best-practices](https://github.com/futurice/android-best-practices)，这个建议精读一下，里面的每一条都是别人踩过的坑总结来的，十分有价值。
@@ -99,7 +109,7 @@
 另外强烈push设计的同学使用Sketch，这样不仅可以解放设计的同学在无尽的切图中，也可以让自己节约更多的时间。
 
 ## 总结
-
+笔者离职一年，感觉创业和做`freelancer`有很多相似的地方，有大量灵活的时间，你需要学习如何去掌握你的时间，毕竟工作只是生活的一部分，你需要合理的分配时间。所以你的代码要尽可能的少些，即能自动生成的就用脚本来做，能抽象的就不重复去写，可以给自己节约更多的时间去玩耍。。。
 
 ## 参考文章
 [ReactiveX](http://reactivex.io/)
