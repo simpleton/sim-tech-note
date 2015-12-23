@@ -21,10 +21,11 @@
 ## RxJava
 首先给大家安利[ReactiveX](http://reactivex.io/)，其中Android的核心实现为RxJava。
 
-为了App不卡顿，我们会把所有耗时的操作（比如：网络访问、文件访问）放到Worker Thread中。但是Android本身的AsyncTask的设计个人觉得设计的十分糟糕，不但写出来的代码冗长，而且稍微复杂一些的多流操作就会写的完全无法维护（这里可以用Java本身的线程模式来实现）。而且肆意的开线程也会造成App的卡顿。这里本身最初的想法就是需要一个线城池，以Promise的方式对外提供接口。原先试用过facebook的开源方案[Bolts-Android](https://github.com/BoltsFramework/Bolts-Android)，这个库是parse的开源方案。后来有ios的同时推荐Reactive的方案，于是就走上了Rx脑残粉的不归路。
+为了App不卡顿，我们会把所有耗时的操作（比如：网络访问、文件访问）放到Worker Thread中。但是Android本身的AsyncTask的设计个人觉得设计的十分糟糕，不但写出来的代码冗长，而且稍微复杂一些的多流操作就会写的完全无法维护（这里可以用Java本身的线程模式来实现）。而且肆意的开线程也会造成App的卡顿。这里本身最初的想法就是需要一个线程池，以Promise的方式对外提供接口。原先试用过facebook的开源方案[Bolts-Android](https://github.com/BoltsFramework/Bolts-Android)，这个库是parse的开源方案。后来有iOS的同时推荐Reactive的方案，于是就走上了Rx脑残粉的不归路。
 
 首先Rx会大大减少你的代码量，这一点对“懒惰”的我们十分重要。
 下面举2个平时开发都会遇到的问题来举例：
+
 1. 搜索界面
 
 	我们需要在用户输入完毕后第一时间显示搜索结果，由于这个需要请求后台，我们又不想用户每次输入的时候都去后台请求。并且总需要显示当前最新输入内容的结果，不能因为网络的原因产生乱序的结果。
@@ -53,7 +54,7 @@
 
 ## MVVM & MVP
 
-![image](https://cdn-images-1.medium.com/max/800/1*NonRJ0uzzN9o1ygT6J421g.png)
+![image](http://7tszlo.com2.z0.glb.qiniucdn.com/mvvm.pic.jpg)
 
 关于MVVM我一直是拒绝的，因为一开始的几个Screen我是用硬套MVVM的模式来做的，虽然activity的代码十分简单，但是View和ViewModel都会写一些晦涩、重复的逻辑来保证数据绑定，这不符合D.R.Y.。后来发现google官方有一个[data-binding](http://developer.android.com/tools/data-binding/guide.html)的实现。感觉实现和prism十分类似。已经在最新的迭代中开始使用data-binding配合MVVM，具体可以参考一个例子:https://github.com/ivacf/archi
 
