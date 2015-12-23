@@ -7,7 +7,7 @@
 	- [如何优雅的偷懒](#)
 		- [REST Client](#rest-client)
 		- [Image Loader](#image-loader)
-		- [数据监控与分析](#)
+		- [质量保证](#)
 	- [最佳实践](#)
 	- [总结](#)
 	- [参考文章](#)
@@ -90,7 +90,7 @@
 
 其中`Picasso`和`Glide`的接口十分接近，但是benckmark下来`Glide`的性能更好一些，并且支持更多格式的图片，我们现在使用的的是`Glide`，而`Fresco`的功能是这3个库中最强大的，且支持`PJPG`。但是他需要替换你的View，并且接口设计的不如上述2个库。笔者在3个多月以前用`Fresco`的时候，他在加载多张图片的时候偶尔会有显示不出的情况，不确定现在是否修复。
 
-### 数据监控与分析
+### 质量保证
 监控数据对于App来讲也十分重要，Growth Hacker和开发都需要经常关注。笔者现在在用的有一下几款产品：
 
 	1. [fabric](https://get.fabric.io/)
@@ -98,6 +98,8 @@
 	3. [splunk](http://www.splunk.com)
 
 fabric和umeng的功能有很大的重叠，fabric是twitter旗下的数据上报和分析系统，笔者这里使用了他的crash报上，做的十分强大，给App的质量提供了保证。splunk是一款服务端的log分析系统，有了他的支持客户端可以减少需要无谓的事件上报。
+
+另外
 
 ## 最佳实践
 关于最佳实践当然见仁见智，不过笔者还是推荐一些比较成熟的方案[android-best-practices](https://github.com/futurice/android-best-practices)，这个建议精读一下，里面的每一条都是别人踩过的坑总结来的，十分有价值。
