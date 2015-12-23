@@ -7,6 +7,7 @@
 	- [如何优雅的偷懒](#)
 		- [REST Client](#rest-client)
 		- [Image Loader](#image-loader)
+		- [ButterKnife](#butterknife)
 		- [质量保证](#)
 	- [最佳实践](#)
 	- [总结](#)
@@ -89,6 +90,9 @@
 	3. [Fresco](https://github.com/facebook/fresco)
 
 其中`Picasso`和`Glide`的接口十分接近，但是benckmark下来`Glide`的性能更好一些，并且支持更多格式的图片，我们现在使用的的是`Glide`，而`Fresco`的功能是这3个库中最强大的，且支持`PJPG`。但是他需要替换你的View，并且接口设计的不如上述2个库。笔者在3个多月以前用`Fresco`的时候，他在加载多张图片的时候偶尔会有显示不出的情况，不确定现在是否修复。
+
+### ButterKnife
+Jake Wharton是个非常高产的大神，诸多开源库都是他主导的（RxAndroid也是他主要在主导）。[ButterKnife](https://github.com/JakeWharton)可以帮助你少写很多重复的code。配合IDEA的插件可以不用写很多繁琐的`findviewByid`的搬砖代码。
 
 ### 质量保证
 监控数据对于App来讲也十分重要，Growth Hacker和开发都需要经常关注。笔者现在在用的有一下几款产品：
